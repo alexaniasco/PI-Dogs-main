@@ -1,0 +1,15 @@
+
+
+.NavBar{
+display: flex;
+align-items: center;
+gap:30%;
+margin-right: 10%;
+}
+
+.Btn_nav{
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+    border-radius: 2rem;
+}

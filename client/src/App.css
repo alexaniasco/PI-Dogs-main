@@ -1,0 +1,66 @@
+.App_cont {
+  width: 100%;
+  height: 100%;
+  padding: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App_title{
+  
+}
+
+.App_filtros{
+  display: flex;
+}
+
+.Searchbar_cont {
+  display: flex;
+  background-image: url(https://media0.giphy.com/media/4Zo41lhzKt6iZ8xff9/giphy.gif?cid=ecf05e47i1b4ahx33lpi4hr6vjfha7vgvr6356ynn1lz4n7d&rid=giphy.gif);
+  justify-content: center;
+  height: 35px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* CONTENEDOR DE DOGGS */
+.Dogs_cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 90px;
+}
+.NavBar_cont {
+  background: #454545;
+  position: fixed;
+  bottom: 0px;
+  top: auto;
+  width: 100%;
+  height: 40px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://thumbs.dreamstime.com/b/collage-con-perros-diferentes-en-segundo-plano-dise%C3%B1o-de-banners-fondo-blanco-182007348.jpg");
+  background-size: 400px;
+}
+
+.navbar {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  line-height: 100%;
+  margin: 8px 0px;
+}
+
+.miapp {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+}

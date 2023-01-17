@@ -1,0 +1,26 @@
+.Home_btn {
+  height: 100%;
+  font-size: large;
+  border-color: white;
+}
+
+.Search {
+  display: flex;
+  align-items: center;
+}
+
+.Search_text {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f3f3f3;
+  width: auto;
+  text-align: center;
+  font-size: medium;
+  border-style: none;
+}
+
+.Submit_search_btn {
+  height: 100%;
+  font-size: small;
+  border-width: 1px;
+  border-color: white;
+}
