@@ -13,7 +13,7 @@ const initialState = {
 const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case GET_DOGS:
-      return { ...state, Dogs: payload };
+      return { Dogs: payload };
     case GET_DOG_DETAIL:
       return { ...state, DogDetail: payload};
     default:

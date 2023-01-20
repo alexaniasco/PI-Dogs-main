@@ -3,13 +3,15 @@
 .NavBar{
 display: flex;
 align-items: center;
-gap:30%;
-margin-right: 10%;
+width: 100%;
+justify-content: center;
+gap: 9%;
 }
 
 .Btn_nav{
+    border-color: white;
     display: flex;
     width: max-content;
     flex-direction: row;
-    border-radius: 2rem;
+    font-weight: 600;
 }

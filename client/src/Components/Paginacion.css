@@ -1,16 +1,17 @@
 .paginacion{
     display: flex;
-    flex-direction:row;
+  
     justify-content: center;
-    width: 100%;
-    margin-bottom: 80px;
+      
+    width: 100% ;
+    margin-bottom: 1%;
+    gap: 40%;
     
 
     
 }
 .paginacion .botone{
-    height: 30px;
-    margin: 0 60px;
-
+  
+ 
  
 }

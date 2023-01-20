@@ -7,7 +7,7 @@ module.exports = (sequelize) => {
   sequelize.define(
     "raza",
     {
-      Id: {
+      id: {
         type: DataTypes.UUID,
         primaryKey: true,
         
@@ -17,19 +17,23 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      altura: {
-        type: DataTypes.STRING,
-      },
+      
       height: {
         type: DataTypes.INTEGER,
       },
-      heightMax: {
+      maxheight: {
+        type: DataTypes.INTEGER,
+      },
+      weight: {
+        type: DataTypes.INTEGER,
+      },
+      maxweight: {
         type: DataTypes.INTEGER,
       },
       life_span: {
         type: DataTypes.INTEGER,
       },
-      url: {
+      image: {
         type: DataTypes.STRING,
       },
     },

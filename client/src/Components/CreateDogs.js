@@ -9,10 +9,12 @@ export const CreateDogs = () => {
     name: "",
     altura: "",
     height: "",
-    heightMax:"",
+    heightMax: "",
     life_span: "",
-    url:""
+    url: "",
   });
+
+  const [errors, setErrors] = useState({});
 
   const handlechange = (e) => {
     setProps({
@@ -23,17 +25,17 @@ export const CreateDogs = () => {
     console.log(props);
   };
 
-  const handleSubmit = ()=>{
-    
-    fetch("http://localhost:3001/dogs",{
-      method:"POST",
-      body:JSON.stringify(props),
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      
+      fetch("http://localhost:3001/dogs", {
+      method: "POST",
+      body: JSON.stringify(props),
       headers: {
-        'Content-Type': 'application/json'
-    
-      }
-    })}
-  
+        "Content-Type": "application/json",
+      },
+    });
+  };
 
   return (
     <div className="Form_cont">
@@ -43,44 +45,55 @@ export const CreateDogs = () => {
           <div className="Formulario">
             <h1 className="tit">Crea tu perro</h1>
             <input
+              autoComplete="off"
+              maxLength="25"
               name="name"
               value={props.name}
               className="imput"
-              placeholder="Nombre"
+              placeholder="Name"
               onChange={handlechange}
             ></input>
+            {errors.nombre && <p>{errors.nombre}</p>}
             <input
+              autoComplete="off"
               name="altura"
-              onChange={handlechange}
               value={props.altura}
-              type="number"
+              maxLength="3"
               className="imput"
-              placeholder="Altura"
-            ></input>
-            <input
-              name="height"
-              value={props.height}
-              type="number"
-              className="imput"
-              placeholder="Peso"
+              placeholder="Height"
               onChange={handlechange}
             ></input>
-             <input
+            {errors.nombre && <p>{errors.nombre}</p>}
+            <input
+              autoComplete="off"
+              name="height"
+              maxLength="2"
+              value={props.height}
+              className="imput"
+              placeholder="Weight"
+              onChange={handlechange}
+            ></input>
+            {errors.nombre && <p>{errors.nombre}</p>}
+            <input
+              autoComplete="off"
+              maxLength="2"
               name="heightMax"
               value={props.heightMax}
-              type="number"
               className="imput"
-              placeholder="height max"
+              placeholder="Weight Max"
               onChange={handlechange}
             ></input>
+            {errors.nombre && <p>{errors.nombre}</p>}
             <input
+              autoComplete="off"
               name="life_span"
               value={props.life_span}
               type="number"
               className="imput"
-              placeholder="Años de vida"
+              placeholder="Life Span"
               onChange={handlechange}
             ></input>
+            {errors.nombre && <p>{errors.nombre}</p>}
             <input
               name="url"
               value={props.url}
@@ -89,15 +102,14 @@ export const CreateDogs = () => {
               placeholder="Url Image"
               onChange={handlechange}
             ></input>
+            {errors.nombre && <p>{errors.nombre}</p>}
             <div className="selectd">
               <Select></Select>
-
             </div>
-           
-           <button className="dogsubmit" type="submit">
+
+            <button className="dogsubmit" type="submit">
               SUBMIT
             </button>
-           
           </div>
         </form>
       </div>

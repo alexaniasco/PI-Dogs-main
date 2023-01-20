@@ -3,9 +3,9 @@ import './Paginacion.css'
 
 export const Paginacion = ({prevhandler,nexthandler}) => {
   return (
-    <footer className='paginacion'>
-        <div>
-            <div>
+  
+       
+            <div className='paginacion'>
             <button className="botone" onClick={() => prevhandler()}>
           ⏪
         </button>
@@ -13,7 +13,7 @@ export const Paginacion = ({prevhandler,nexthandler}) => {
         ⏩
         </button>
             </div>
-        </div>
-    </footer>
+        
+   
   )
 }

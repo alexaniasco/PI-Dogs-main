@@ -2,14 +2,19 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SearchBar.css";
 
-function SearchBar({ refresh , search }) {
+function SearchBar({search}) {
 
- const [inputval , setInputval] = useState("")
+const [inputval,setInputval] = useState("")
+
+
+
+  
+
 
   return (
     <div className="Searchbar_cont">
       <Link to="/">
-        <button onClick={() => refresh()} className="Home_btn">
+        <button  className="Home_btn">
           Home
         </button>
       </Link>
@@ -20,6 +25,6 @@ function SearchBar({ refresh , search }) {
       <p>DOGING</p>
     </div>
   );
-}
+  }
 
 export default SearchBar;

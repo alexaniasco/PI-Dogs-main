@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Card.css"
 
-export default function Card({ image, name, temperament, height, life_span ,id}) {
+export default function Card({ image, name, temperament, height,maxheight,weight,maxweight, life_span ,id,loading}) {
+
+  if(loading) return <h1>loading</h1>
   return (
     <div className="Dog">
       <div className="parteB">
@@ -11,11 +13,12 @@ export default function Card({ image, name, temperament, height, life_span ,id})
         </div>
       </div>
       <div className="parteA">
-      <Link to={`/${id}`}> CLICK</Link>
-        <div>
-          <div>{temperament}</div>
-          <div>{height}</div>
-          <div>{life_span}</div>
+      <Link to={`/${id}`} className="temps temps_link"> Detalles</Link>
+        <div className="temps_cont">
+          <div className="temps">{temperament + ", "}</div>
+          <div className="temps">height: {height + " - " + maxheight}</div>
+          <div className="temps">weight: {weight + " - " + maxweight}</div>
+          <div className="temps">{life_span}</div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 export default function NavBar({
-  filtro,
+  filtrodb,filtroapi
 }) {
     
   return (
@@ -12,15 +12,14 @@ export default function NavBar({
           {" "}
           <button className="Btn_nav">Ceate Dog</button>
         </Link>
-        <Link to="/dogs">
-          {" "}
-          <button className="Btn_nav">All</button>
-        </Link>
-        <Link to={"/dogs"}>
-          <button className="Btn_nav" onClick={() => filtro()}>
+        
+          <button onClick={filtroapi} className="Btn_nav">Api Dogs</button>
+      
+      
+          <button onClick={filtrodb} className="Btn_nav">
             My Dogs
           </button>
-        </Link>
+        
       </div>
     </div>
   );

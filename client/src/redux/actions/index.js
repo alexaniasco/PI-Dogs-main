@@ -16,11 +16,14 @@ export const GET_DOG_DETAIL = "GET_DOG_DETAIL";
 //      Para obtener la informacion del detalle recorda utilizar la ruta http://localhost:3001/character/:id
 //      Usar ruta 'http://localhost:3001/characters' p
 
+const total = []
+
+
 export const getCharacters = () => (dispatch) => {
   return fetch(`http://localhost:3001/dogs`)
     .then((r) => r.json())
     .then((json) => {
-      dispatch({ type: "GET_DOGS", payload: json });
+      dispatch({ type: "GET_DOGS", payload: total});
     });
 };
 

@@ -35,6 +35,12 @@
       transform: perspective(600px) rotateY(0deg);
     
     }
+
+    .temps{
+      margin-left: 10px;
+      word-wrap: break-word;
+      
+    }
     
     .parteA{
       position: absolute;
@@ -50,6 +56,7 @@
       margin: 0 auto;
       opacity: 0%;
       transition: all 0.7s ease;
+      
     }
      .parteA:hover{
     
@@ -95,4 +102,13 @@
       width: 100%;
       transform-style: preserve-3d;
       transition: all 0.2s ease;
+    }
+
+    .temps_cont{
+      margin-bottom: 10px;
+    }
+
+    .temps_link{
+      font-weight: 800;
+      color: rgb(147, 163, 255);
     }

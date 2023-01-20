@@ -4,7 +4,7 @@ import Title from "./SearchBar";
 import NavBar from "./NavBar";
 
 function Totaldogs() {
-  const [totalDogs, setTotaldogs] = useState();
+  const [totalDogs, setTotaldogs] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3001/dogs")
@@ -18,7 +18,7 @@ function Totaldogs() {
         <Title></Title>
         <div className="App_cont">
           <div className="Dogs_cont">
-            {totalDogs.dogsDb.map((e) => (
+            {totalDogs.map((e) => (
               <Card
               id={e.Id}
                 key={e.razaId}
